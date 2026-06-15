@@ -11,9 +11,9 @@ import './App.css';
 // i check window.location.hostname to see if we are running locally.
 // if it is localhost or 127.0.0.1, we connect to local server port 5000,
 // otherwise we use our deployed signaling server on Render.
-const socketUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-  ? 'http://localhost:5000' 
-  : 'https://your-backend-url.onrender.com'; // REPLACE THIS with your Render URL when deployed
+const socketUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:5000'
+  : 'https://p2p-webshare-backend-04lp.onrender.com/';
 
 const socket = io(socketUrl);
 const CHUNK_SIZE = 16 * 1024; // 16kb per chunk. WebRTC data channel limit is usually 64kb max, so 16kb is safe
