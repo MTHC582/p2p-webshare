@@ -1,0 +1,41 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f1117;
+  --bg-card: #181a20;
+  --bg-card-hover: #1e2028;
+  --border: #2a2d38;
+  --border-accent: #3a7bfd;
+  --text: #c9cdd4;
+  --text-heading: #e8eaed;
+  --text-muted: #6b7280;
+  --accent: #3a7bfd;
+  --accent-hover: #5a93fd;
+  --success: #34d399;
+  --error: #f87171;
+  --warning: #fbbf24;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', 'Fira Code', Consolas, monospace;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

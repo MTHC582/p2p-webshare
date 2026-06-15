@@ -1,0 +1,328 @@
+/* main container */
+.app {
+  width: 100%;
+  max-width: 560px;
+  padding: 40px 20px;
+}
+
+/* header */
+.app-header {
+  margin-bottom: 32px;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+}
+
+.app-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* status bar at the top */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+
+/* the little dot that shows connection status */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.connected {
+  background: var(--success);
+}
+
+.status-dot.disconnected {
+  background: var(--error);
+}
+
+.status-dot.waiting {
+  background: var(--warning);
+}
+
+.status-text {
+  color: var(--text);
+}
+
+/* card component used for room and transfer sections */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-heading);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* room controls */
+.room-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.room-input {
+  flex: 1;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  outline: none;
+}
+
+.room-input:focus {
+  border-color: var(--accent);
+}
+
+.room-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* buttons */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+}
+
+.btn-send {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-send:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+/* the sharable room link row */
+.room-link-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.room-link-text {
+  flex: 1;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-copy {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* drag and drop zone for file selection */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* highlight when dragging over */
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: var(--accent);
+  background: rgba(58, 123, 253, 0.05);
+}
+
+.drop-zone-label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.drop-zone-label span {
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* hide the actual file input, the whole drop zone is clickable */
+.drop-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* shows the selected file name and size */
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.file-name {
+  color: var(--text-heading);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 12px;
+}
+
+.file-size {
+  color: var(--text-muted);
+}
+
+/* progress bar section */
+.progress-section {
+  margin-top: 16px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.progress-percent {
+  color: var(--text-heading);
+  font-weight: 500;
+}
+
+.progress-speed {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+/* turns green when transfer is done */
+.progress-fill.complete {
+  background: var(--success);
+}
+
+/* shows the SHA-256 hash after transfer */
+.hash-result {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: var(--mono);
+  border: 1px solid var(--border);
+}
+
+.hash-result.verified {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.hash-result.failed {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* mobile responsive */
+@media (max-width: 480px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .app-title {
+    font-size: 22px;
+  }
+
+  .room-controls {
+    flex-direction: column;
+  }
+
+  .room-link-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .room-link-text {
+    width: 100%;
+    text-align: center;
+  }
+}
