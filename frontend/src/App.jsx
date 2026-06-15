@@ -13,7 +13,7 @@ import './App.css';
 // otherwise we use our deployed signaling server on Render.
 const socketUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:5000'
-  : 'https://p2p-webshare-backend-04lp.onrender.com/';
+  : 'https://p2p-webshare-backend-04lp.onrender.com';
 
 const socket = io(socketUrl);
 const CHUNK_SIZE = 16 * 1024; // 16kb per chunk. WebRTC data channel limit is usually 64kb max, so 16kb is safe
