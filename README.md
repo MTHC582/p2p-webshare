@@ -65,7 +65,7 @@ To guarantee that the file did not get corrupted during P2P transmission (e.g. l
 
 ```bash
 # clone the repo
-git clone <your-repo-url>
+git clone https://github.com/MTHC582/p2p-webshare
 cd p2p-webshare
 
 # install backend stuff
