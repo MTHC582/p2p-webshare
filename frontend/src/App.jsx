@@ -30,7 +30,7 @@ function App() {
   const [transferDone, setTransferDone] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
 
-  // i use refs to keep track of PeerJS instance and direct direct connection channel.
+  // i use refs to keep trac of peerjs instance and direct direct connection channel.
   // refs are great because updating them doesn't trigger component re-renders
   const peerInstance = useRef(null);
   const connectionRef = useRef(null);
