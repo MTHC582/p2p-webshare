@@ -64,7 +64,7 @@ To guarantee that the file did not get corrupted during P2P transmission (e.g. l
 ### Install
 
 ```bash
-# clone the repo
+# TODO: Replace with your actual GitHub repository URL when you push your code
 git clone https://github.com/MTHC582/p2p-webshare
 cd p2p-webshare
 
@@ -118,11 +118,14 @@ Render is free and hosts Node.js apps.
    - **Build Command**: `npm install`
    - **Start Command**: `node server.js`
 5. Click **Deploy Web Service**
-6. Copy the URL Render generates for you (e.g. `https://your-app.onrender.com`)
+6. Copy the URL Render generates for you (e.g. `https://p2p-webshare-backend.onrender.com`)
+
+> [!NOTE]
+> **Render Free Tier Spin Down**: Because we host the signaling server on Render's free tier, the backend server goes to sleep automatically if it is idle for 15 minutes. When accessing the web app for the first time after it sleeps, it can take **50 to 60 seconds** for the backend server to wake up and connect (the connection dot will remain orange/waiting during this time). Once the server is awake, connections will be instant and stable.
 
 ### 2. Connect Frontend to the Deployed Backend
 1. Open `frontend/src/App.jsx` in your code editor
-2. On line 13, replace the dummy URL inside `https://your-backend-url.onrender.com` with your actual Render URL
+2. On line 13, replace the dummy URL inside `https://your-backend-url.onrender.com` with your actual Render URL (from step 1)
 3. Commit and push the changes to GitHub
 
 ### 3. Deploy the Frontend to Vercel
