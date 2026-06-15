@@ -64,7 +64,6 @@ To guarantee that the file did not get corrupted during P2P transmission (e.g. l
 ### Install
 
 ```bash
-# TODO: Replace with your actual GitHub repository URL when you push your code
 git clone https://github.com/MTHC582/p2p-webshare
 cd p2p-webshare
 
